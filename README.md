@@ -18,3 +18,19 @@ To use the LLM CV Parser, follow these steps:
 
    ```bash
    git clone https://github.com/Younes-Piro/llm-cv-parser.git
+
+2. Change into the project directory:
+
+   ```bash
+   cd llm-cv-parser
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+
+4. Create a .env file in the root of the project and add your OpenAI API key:
+
+   ```bash
+      OPENAI_API_KEY=your-api-key-goes-here
+   
