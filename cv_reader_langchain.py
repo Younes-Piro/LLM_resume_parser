@@ -16,7 +16,7 @@ def read_cv(cv):
     # load cv file
     loader = PyPDFLoader(cv)
     documents = loader.load()
-
+    
     # prompt
     PROMPT = '''
     
