@@ -32,7 +32,7 @@ def parse_job(description_de_poste, openai_api_key, max_tokens):
     conversation = [
         {"role": "system", "content": "Vous êtes un analyseur de descriptions de poste."},
         {"role": "user", "content": f"Analysez la description de poste suivante et extrayez les informations pertinentes :\n\n{description_de_poste}"},
-        {"role": "assistant", "content": "Informations extraites en JSON avec exactement la structure suivante : {information_post : {titre_post, année_experience},  list_compétences: {[]}, Responsabilités: {[]}" }
+        {"role": "assistant", "content": "Informations extraites en JSON avec exactement la structure suivante : {information_post : {intitule_poste, année_experience}, Skills : {Programming_languages, responsibilities, theorical_skills}}" }
 
     ]
 
