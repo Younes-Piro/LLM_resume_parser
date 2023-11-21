@@ -165,3 +165,6 @@ assets/
 
 # ignore chromadb
 chromadb/
+
+#ignore examples
+examples/
