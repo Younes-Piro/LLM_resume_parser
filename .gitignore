@@ -168,3 +168,6 @@ chromadb/
 
 #ignore examples
 examples/
+
+#ignore data 
+data/

@@ -13,9 +13,11 @@ def calculate_experience_relevance_adjusted(months_experience_profile, months_ex
     years_experience_job = months_experience_job / 12
     return max(0, 1 - abs(years_experience_profile - years_experience_job) / divisor)
 
-# Example usage:
-months_experience_profile = 42  # 3.5 years
-months_experience_job = 60  # 5 years
 
+def matching(cv, job):
 
-calculate_experience_relevance_adjusted(months_experience_profile, months_experience_job)
+    score = 0
+
+    score_experience = calculate_experience_relevance_adjusted(cv['months_experiences'], job['months_experiences'])
+
+    return score

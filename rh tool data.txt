@@ -1,0 +1,3 @@
+- recommandation similarity profile , job description
+- recommandation des formations 
+- pdf scanning for job description

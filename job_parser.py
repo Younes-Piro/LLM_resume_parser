@@ -1,30 +1,6 @@
 import openai
-import os
-from pdfminer.pdfpage import PDFPage
-from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
-from pdfminer.converter import TextConverter
-from pdfminer.layout import LAParams
-import io
 
-
-# Set your GPT-3 API key
-openai.api_key = os.environ['OPENAI_API_KEY']
-
-def read_pdf(pdf):
-    # load cv file
-    i_f = open(pdf,'rb')
-    resMgr = PDFResourceManager()
-    retData = io.StringIO()
-    TxtConverter = TextConverter(resMgr,retData, laparams= LAParams())
-    interpreter = PDFPageInterpreter(resMgr,TxtConverter)
-    for page in PDFPage.get_pages(i_f):
-        interpreter.process_page(page)
- 
-    txt = retData.getvalue()
-    return txt
-
-
-def parse_job(description_de_poste, openai_api_key, max_tokens):
+def parse_job(description_de_poste, openai_api_key, max_tokens=1000):
 
     openai.api_key = openai_api_key
 
@@ -46,5 +22,5 @@ def parse_job(description_de_poste, openai_api_key, max_tokens):
     # Extrayez la réponse de l'assistant
     assistant_reply = response['choices'][0]['message']['content']
 
-    # Affichez ou utilisez la réponse de l'assistant selon vos besoins
-    print(assistant_reply)
+    #return the result
+    return assistant_reply
